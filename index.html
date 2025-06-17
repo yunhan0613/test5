@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>彼方に咲く The Bloom Beyond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {{
+      background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?blend=ffffff&sat=-100&exp=15');
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(3px);
+    }}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Higanbana.jpg" alt="彼岸花" width="80"><br>
+    <h1>彼方に咲く<br><span style="font-size:1.2rem;">The Bloom Beyond</span></h1>
+    <p>請選擇你想踏入的故事</p>
+  </div>
+  <div class="main">
+    <div class="card" onclick="selectMember('junki')">Junki</div>
+<div class="card" onclick="selectMember('kimata')">Kimata</div>
+<div class="card" onclick="selectMember('ruki')">Ruki</div>
+<div class="card" onclick="selectMember('shion')">Shion</div>
+<div class="card" onclick="selectMember('shosei')">Shosei</div>
+<div class="card" onclick="selectMember('sky')">Sky</div>
+<div class="card" onclick="selectMember('ren')">Ren</div>
+<div class="card" onclick="selectMember('takumi')">Takumi</div>
+<div class="card" onclick="selectMember('mame')">Mame</div>
+<div class="card" onclick="selectMember('keigo')">Keigo</div>
+<div class="card" onclick="selectMember('sho')">Sho</div>
+  </div>
+  <script>
+    function selectMember(member) {{
+      localStorage.setItem("selectedMember", member);
+      localStorage.removeItem("taskCompleted");
+      localStorage.removeItem("scene2done");
+      window.location.href = member + "_scene1.html";
+    }}
+  </script>
+</body>
+</html>

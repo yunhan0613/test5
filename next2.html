@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>進入 Scene 3</title>
+  <script>
+    const member = localStorage.getItem("selectedMember");
+    const taskDone = localStorage.getItem("scene2done");
+
+    if (!member || taskDone !== "true") {
+      alert("請先完成前一站！");
+      window.location.href = "index.html";
+    } else {
+      window.location.href = member + "_scene3.html";
+    }
+  </script>
+</head>
+<body>請稍候...</body>
+</html>
